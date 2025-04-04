@@ -4,7 +4,6 @@
 **A modern, responsive portfolio website with glassmorphism design, dark/light mode toggle, and smooth animations.**  
 *Built with pure HTML & CSS — no JavaScript!*
 
-![Portfolio Preview](https://i.imgur.com/JQjvL7A.gif)
 
 ---
 
@@ -28,7 +27,7 @@
 ## 🚀 Installation
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Africolt/static-portfolio.git
+   git clone https://github.com/Africolt/.....
 
     #Usage
 
