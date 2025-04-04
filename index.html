@@ -10,13 +10,13 @@
 </head>
 <body>
   <!-- Dark/Light Toggle -->
-  <div class="theme-toggle">
-    <input type="checkbox" id="toggle">
-    <label for="toggle" class="toggle-label">
-      <i class="fas fa-moon"></i>
-      <i class="fas fa-sun"></i>
-      <span class="toggle-ball"></span>
+  <div class="theme-switch-wrapper">
+    <span class="theme-icon">🌙</span>
+    <label class="theme-switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider round"></span>
     </label>
+    <span class="theme-icon">🌞</span>
   </div>
 
   <!-- Background shapes -->
@@ -26,11 +26,15 @@
   <!-- Main container -->
   <div class="glass-container">
     <!-- Header with Photo -->
-    <header class="profile-card">
+     <section class="profile-section">
+        <div class="profile-photo">
       <img src="https://media.licdn.com/dms/image/v2/D4D03AQEaN2JPWSs9nA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1690389547764?e=1749081600&v=beta&t=5UxiHubu6J3xyDPvw1btjr5a__xd0RJx_2fNWNZk6Bk" alt="amahwamarion" class="profile-img">
+        </div>
+        <div class="profile-text">
       <h1>Hello, I'm <span class="highlight">Amahwa </span></h1>
       <p>Tech enthusiast & Frontend Developer</p>
-    </header>
+        </div>
+     </section>
 
     <!-- Flip Intro Card -->
     <div class="flip-card">
@@ -44,7 +48,6 @@
           <p>Motivated and detailed oriented personnel.I specialize in creating immersive digital experiences with a focus on clean design and intuitive interactions.</p>
           <a href="my-resume.pdf" class="glass-btn" download>
             <i class="fas fa-download"></i>Download Resume</a>
-            <button class="glass-btn">View Resume</button>
         </div>
       </div>
     </div>
