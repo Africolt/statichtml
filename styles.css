@@ -1,0 +1,208 @@
+/* === Luminous Dark Mode === */
+:root {
+    /* Light Mode */
+    --bg-gradient: linear-gradient(135deg, #03663d 0%, #c3cfe2 100%);
+    --text-color: #333;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --highlight: #667eea;
+    --shadow: rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  [data-theme="dark"] {
+    /* Glowy Dark Mode */
+    --bg-gradient: linear-gradient(135deg, #050225 20%, #403c6d 50%, #5c5ca0 100%);
+    --text-color: #e6e6ff;
+    --glass-bg: rgba(15, 12, 41, 0.6);
+    --highlight: #500404;
+    --shadow: rgba(157, 141, 255, 0.3);
+    --glow: 0 0 15px var(--highlight);
+  }
+  
+  /*== Floating Photo*/
+  .profile-im {
+    animation: float 6s ease-in-out infinite
+  }
+
+  /*==profile section==*/
+  .profile-section{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .profile-photo {
+    width: 60px;
+    height: 10px;
+    min-width: 50px; /*prevents squishing*/
+    border-radius: 50%;
+    border: 3px solid var(--highlight);
+    overflow: hidden;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .profile-img {
+    width: 10%;
+    height: 7%;
+    object-fit: cover;
+  }
+
+  .profile-text {
+    flex: 1;
+  }
+  /*responsive adjustments*/
+  @media (max-width:400px){
+    .profile-section{
+        width: 60px;
+        height: 60px;
+        flex-direction: column;
+        text-align: center;
+      }
+
+    }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0);}
+    50% {transform:  translateY(-10 px);}
+  }
+
+  /* ==Pulse effect on Interactive Items ===*/
+  .glass-btn, .social-links a, .project-card{
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {transform: scale(1);}
+    50% {transform: scale(1.03)}
+  }
+
+  /*== Section Fade-In ===*/
+  .glass-card {
+    animation: fadeIn 1s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to { opacity: 1;transform: translate(0);}
+  }
+
+  /*==Pressable Button ===*/
+  .glass-btn:active {
+    transform: scale(0.95)!important;
+  }
+
+  /*===Hover Glow Effect ===*/
+  .profile-card:hover, .glass-card:hover{
+    box-shadow: 0 0 15px var(--highlight);
+    transition: all 0.3s;
+  }
+  body {
+    background: var(--bg-gradient);
+    color: var(--text-color);
+    transition: all 0.5s ease;
+  }
+  
+  /* === Working Toggle Switch === */
+.theme-switch-wrapper {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--glass-bg);
+    backdrop-filter: blur(5px);
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background: var(--highlight);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(30px);
+  }
+
+  .toggle-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+    height: 30px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .toggle-ball {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: white;
+    border-radius: 50%;
+    left: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  #toggle:checked + .toggle-label .toggle-ball {
+    transform: translateX(30px);
+  }
+  
+  /* Social Links */
+  .social-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .social-links a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: all 0.3s;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    backdrop-filter: blur(5px);
+  }
+  
+  .social-links a:hover {
+    color: var(--highlight);
+    transform: translateY(-5px);
+  }

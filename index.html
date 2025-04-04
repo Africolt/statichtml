@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Dark/Light Toggle -->
+  <div class="theme-toggle">
+    <input type="checkbox" id="toggle">
+    <label for="toggle" class="toggle-label">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+      <span class="toggle-ball"></span>
+    </label>
+  </div>
+
+  <!-- Background shapes -->
+  <div class="shape-1"></div>
+  <div class="shape-2"></div>
+
+  <!-- Main container -->
+  <div class="glass-container">
+    <!-- Header with Photo -->
+    <header class="profile-card">
+      <img src="https://media.licdn.com/dms/image/v2/D4D03AQEaN2JPWSs9nA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1690389547764?e=1749081600&v=beta&t=5UxiHubu6J3xyDPvw1btjr5a__xd0RJx_2fNWNZk6Bk" alt="amahwamarion" class="profile-img">
+      <h1>Hello, I'm <span class="highlight">Amahwa </span></h1>
+      <p>Tech enthusiast & Frontend Developer</p>
+    </header>
+
+    <!-- Flip Intro Card -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h2><i class="fas fa-hand-peace"></i> Quick Intro</h2>
+          <p>Hover or tap to learn more →</p>
+        </div>
+        <div class="flip-card-back">
+          <h2>About Me</h2>
+          <p>Motivated and detailed oriented personnel.I specialize in creating immersive digital experiences with a focus on clean design and intuitive interactions.</p>
+          <a href="my-resume.pdf" class="glass-btn" download>
+            <i class="fas fa-download"></i>Download Resume</a>
+            <button class="glass-btn">View Resume</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills Card -->
+    <section class="glass-card">
+      <h2><i class="fas fa-code"></i> Skills</h2>
+      <div class="skill-bar">
+        <p>HTML/CSS</p>
+        <div class="bar"><span class="html"></span></div>
+      </div>
+      <div class="skill-bar">
+        <p>JavaScript</p>
+        <div class="bar"><span class="js"></span></div>
+      </div>
+    </section>
+
+    <!-- Projects Card -->
+    <section class="glass-card">
+      <h2><i class="fas fa-laptop-code"></i> Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x250" alt="Project 1">
+          <div class="project-info">
+            <h3>Glass Dashboard</h3>
+            <p>Figma, CSS</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x250" alt="Project 2">
+          <div class="project-info">
+            <h3>Neon Portfolio</h3>
+            <p>HTML, GSAP</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer with Socials -->
+    <footer class="glass-card">
+      <h2><i class="fas fa-paper-plane"></i> Let's Connect</h2>
+      <div class="social-links">
+        <a href="https://github.com/Africolt" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/marion-amahwa-9378bb267" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com/@Africolt8347" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="mailto:amahwamarion@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
